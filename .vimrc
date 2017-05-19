@@ -1,5 +1,8 @@
 " File: .vimrc
 " Author: @zblankinship
+" References:
+" - https://github.com/dikiaap/minimalist
+" - https://github.com/jez/vim-as-an-ide
 
 " Gotta be first.
 set nocompatible
@@ -9,11 +12,11 @@ set nocompatible
 
 " Key bindings.
 
-" Open nerdtree             --> \t
-" Open tagbar               --> \b
-" Fuzzy search              --> ctrl+p
-" Open alternate files      --> :AT
-" Open man page for word    --> K
+" Open nerdtree                 --> \t
+" Open tagbar                   --> \b
+" Fuzzy search                  --> ctrl+p
+" Open alternate files          --> :AT
+" Open man page for word        --> K
 
 " - Git
 "   git add                     --> :Gwrite
@@ -84,8 +87,8 @@ let g:nerdtree_tabs_open_on_console_startup = 1
 let g:syntastic_error_symbol = "✘"
 let g:syntastic_warning_symbol = "▲"
 augroup mySyntastic
-	au!
-	au FileType tex let b:syntastic_mode = "passive"
+    au!
+    au FileType tex let b:syntastic_mode = "passive"
 augroup END
 
 " - xolox/vim-easytags
@@ -99,19 +102,20 @@ let g:easytags_resolve_links = 1
 let g:easytags_suppress_ctags_warning = 1
 
 " - majutsushi/tagbar
-" Open/close with \b
+"   Open/close with \b
 nmap <silent> <leader>b :TagbarToggle<CR>
-" Uncomment  to open tagbar automatically whenever possible
+"   Uncomment  to open tagbar automatically whenever possible
 "autocmd BufEnter * nested :call tagbar#autoopen(0)
 "
-" - airblad/gitgutter
-" In vim-airline, only display "hunks" if the diff is non-zero
+" - airblade/vim-gitgutter
+"   In vim-airline, only display "hunks" if the diff is non-zero
+let g:gitgutter_enable = 1
 let g:airline#extensions#hunks#non_zero_only = 1
 
 " - Raimondi/delimitMate
 let delimitMate_expand_cr = 1
 augroup mydelimitMate
-	au!
+    au!
 	au FileType markdown let b:delimitMate_nesting_quotes = ["`"]
 	au FileType tex let b:delimitMate_quotes = ""
 	au FileType tex let b:delimitMate_matchpairs = "(:),[:],{:},`:'"
