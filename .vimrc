@@ -71,7 +71,7 @@ syntax on
 set mouse=a
 hi clear SignColumn
 " Bulk find and replace
-:nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
+noremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 
 " hjkl training.
 map <up> :echoerr "Stop being stupid"<CR>
