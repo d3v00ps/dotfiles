@@ -11,6 +11,7 @@
 
 " --- Key Bindings ---
 
+" Bulk find/replace             --> \s on word to replace 
 " Open nerdtree                 --> \t
 " Open tagbar                   --> \b
 " Fuzzy search                  --> ctrl+p
@@ -69,6 +70,8 @@ set cursorline
 syntax on
 set mouse=a
 hi clear SignColumn
+" Bulk find and replace
+:nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 
 " hjkl training.
 map <up> :echoerr "Stop being stupid"<CR>
