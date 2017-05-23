@@ -38,7 +38,6 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'dikiaap/minimalist'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'majutsushi/tagbar'
@@ -63,6 +62,7 @@ set hlsearch
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set cursorline
 
 syntax on
 
@@ -71,8 +71,8 @@ set mouse=a
 hi clear SignColumn
 
 " Theme.
-colorscheme minimalist
-set t_Co=256
+set background=dark
+colorscheme solarized
 
 " Plugin settings.
 execute pathogen#infect()
@@ -116,10 +116,10 @@ let g:airline#extensions#hunks#non_zero_only = 1
 let delimitMate_expand_cr = 1
 augroup mydelimitMate
     au!
-	au FileType markdown let b:delimitMate_nesting_quotes = ["`"]
-	au FileType tex let b:delimitMate_quotes = ""
-	au FileType tex let b:delimitMate_matchpairs = "(:),[:],{:},`:'"
-	au FileType python let b:delimitMate_nesting_quotes = ['"', "'"]
+    au FileType markdown let b:delimitMate_nesting_quotes = ["`"]
+    au FileType tex let b:delimitMate_quotes = ""
+    au FileType tex let b:delimitMate_matchpairs = "(:),[:],{:},`:'"
+    au FileType python let b:delimitMate_nesting_quotes = ['"', "'"]
 augroup END
 
 " - jez/vim-superman
