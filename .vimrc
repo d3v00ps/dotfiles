@@ -81,11 +81,12 @@ map <right> :echoerr "Stop being stupid"<CR>
 
 " Theme.
 set background=dark
+"set background=light
 colorscheme solarized
 
 " --- bling/vim-airline settings ---
 
-" Always show status bar
+" Always show statusbar
 set laststatus=2
 
 " Show PASTE if in paste mode
@@ -94,9 +95,8 @@ let g:airline_detect_paste=1
 " Show airline for tabs too
 let g:airline#extensions#tabline#enabled = 1
 
-" Use solarized theme for Airline status bar
+" Use solarized theme for airline
 let g:airline_theme='solarized'
-    
 
 " --- jistr/vim-nerdtree-tabs settings ---
 
