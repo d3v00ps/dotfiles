@@ -1,5 +1,5 @@
 " File: .vimrc
-" Author: @zblankinship
+" Author: d3v00ps
 " References:
 " - https://github.com/jez/vim-as-an-ide
 " - https://github.com/altercation/vim-colors-solarized
