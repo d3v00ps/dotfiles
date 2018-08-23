@@ -51,6 +51,10 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Raimondi/delimitMate'
 Plugin 'jez/vim-superman'
+Plugin 'JamshedVesuna/vim-markdown-preview'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax' 
+Plugin 'mzlogin/vim-markdown-toc'
 
 call vundle#end()
 
@@ -82,7 +86,7 @@ map <right> :echoerr "Stop being stupid"<CR>
 " Theme.
 set background=dark
 "set background=light
-colorscheme solarized
+"colorscheme solarized
 
 " --- bling/vim-airline settings ---
 
@@ -156,3 +160,6 @@ augroup END
 
 " Better man page support
 noremap K :SuperMan <cword><CR>
+
+" Default Markdown preview to Chrome
+let vim_markdown_preview_browser='Google Chrome'
